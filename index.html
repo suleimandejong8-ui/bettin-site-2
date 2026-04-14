@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>quantam boiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="topbar">
+        quantam boiz
+    </div>
+
+    <div class="container">
+
+        <!-- STAKE CALCULATOR -->
+        <div class="card">
+            <h3>💰 Stake Calculator</h3>
+            <input id="stake" type="number" placeholder="Enter stake (KSh)">
+            <input id="odds" type="number" step="0.1" placeholder="Enter odds">
+            <button onclick="calcStake()">Calculate</button>
+            <p id="result"></p>
+        </div>
+
+        <!-- LEAGUE TABLE -->
+        <div class="card">
+            <h3>📊 League Form Table</h3>
+            <div id="table"></div>
+        </div>
+
+        <!-- ADD CUSTOM TEAMS -->
+        <div class="card">
+            <h3>➕ Add Your Teams</h3>
+            <div style="position: relative;">
+                <input id="teamName" type="text" placeholder="Enter team name" oninput="searchTeams()">
+                <div id="searchResults" style="position: absolute; top: 100%; left: 0; right: 0; background: #121a2a; border: 1px solid #00c853; border-radius: 6px; max-height: 250px; overflow-y: auto; z-index: 100; display: none;"></div>
+            </div>
+            <button onclick="addTeam()" style="margin-top: 10px;">Add Team</button>
+            <p id="teamMessage"></p>
+            <div id="customTeams"></div>
+        </div>
+
+        <!-- MATCHES -->
+        <div id="games"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

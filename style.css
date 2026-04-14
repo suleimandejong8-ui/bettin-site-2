@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    background: #0a0f1c;
+    font-family: Arial;
+    color: white;
+}
+
+.topbar {
+    background: #00c853;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.container {
+    padding: 15px;
+}
+
+/* Cards */
+.card {
+    background: #121a2a;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 6px;
+    border: none;
+    box-sizing: border-box;
+}
+
+/* Button */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    background: #00c853;
+    border: none;
+    color: black;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Match cards */
+.game {
+    background: #121a2a;
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #00c853;
+}
+
+.game.correct {
+    border-left: 4px solid #00ff00;
+    background: #0d1a14;
+}
+
+.game.incorrect {
+    border-left: 4px solid #ff0000;
+    background: #1a0c0c;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    padding: 8px;
+    border-bottom: 1px solid #1e2a44;
+    text-align: center;
+}
+
+/* Custom Teams */
+#customTeams {
+    margin-top: 15px;
+    padding: 10px;
+    background: #0d1a2a;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Predictability Bar */
+.predictability-bar {
+    display: inline-block;
+    width: 120px;
+    height: 12px;
+    background: #333;
+    border-radius: 6px;
+    margin: 0 8px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.predictability-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00c853, #4caf50);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+/* Team Stats Display */
+#customTeams h3 {
+    margin-top: 0;
+    color: #00c853;
+    font-size: 18px;
+}
+
+#customTeams h4 {
+    color: #00c853;
+    font-size: 14px;
+    margin: 12px 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#customTeams ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#customTeams li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #1e2a44;
+    font-size: 13px;
+}
+
+#customTeams li:last-child {
+    border-bottom: none;
+}
+
+/* Search Results Dropdown */
+#searchResults {
+    box-shadow: 0 4px 12px rgba(0, 200, 83, 0.2);
+}
+
+#searchResults > div {
+    transition: background-color 0.2s ease;
+}
+
+#searchResults > div:hover {
+    background: #1a3a2a;
+    border-left: 3px solid #00c853;
+    padding-left: 7px;
+}
+
+/* Game Card Animations */
+.game {
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game.correct {
+    animation: pulseGreen 0.5s ease;
+}
+
+.game.incorrect {
+    animation: pulseRed 0.5s ease;
+}
+
+@keyframes pulseGreen {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7); }
+    50% { box-shadow: 0 0 0 10px rgba(0, 255, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 0, 0); }
+}
+
+@keyframes pulseRed {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+    50% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
